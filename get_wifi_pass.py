@@ -4,7 +4,7 @@ def get_wifi_password():
     try:
 
         profiles_data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles'])
-        profies = [line.split(":")[1].strip() for line in profiles_data.split('\n') if "All User Profiles" in line]
+        profiles = [line.split(":")[1].strip() for line in profiles_data.split('\n') if "All User Profiles" in line]
 
         for profiles in profies:
             try:
