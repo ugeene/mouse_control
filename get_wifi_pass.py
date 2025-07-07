@@ -21,3 +21,4 @@ def get_wifi_password():
 if __name__ == '__main__':
     get_wifi_password()
 
+#This comment is to shaow how changes are managed.
